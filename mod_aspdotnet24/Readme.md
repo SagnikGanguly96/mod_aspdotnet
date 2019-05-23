@@ -17,13 +17,17 @@ How to Build
 ================================
 ## *Using Visual Studio IDE*
 Run Visual Studio
+
 Open the mod_aspdotnet.sln
+
 Select the build flavors (Solution Configuration & Platform)
-Click on the Build button located at the top toolbar or right-click on the "mod_aspdotnet" project and select the "Build" option from the context menu
-(If in any case the building of the solution gets failed due to "Apache.Web.tlb", just build the `Apache.Web` project first and then build the solution)
+
+Click on the Build button located at the top toolbar or right-click on the "mod_aspdotnet" project and select the "Build" option from the context menu (If in any case the building of the solution gets failed due to "Apache.Web.tlb", just build the `Apache.Web` project first and then build the solution)
+
 After the build finishes, 3 files (1. Apache.Web.dll, 2. mod_aspdotnet.so, 3. resolve_apache.dll) will be created under the following directories:
-	For "Debug 2.4" build, the files are located under "win32"(for Win32 platform build) or "x64"(for x64 platform build) under "Debug24" folder will be created on the solution directory
-	For "Release 2.4" build, the files are located under "win32"(for Win32 platform build) or "x64"(for x64 platform build) under "Release24" folder will be created on the solution directory
+
+For "Debug 2.4" build, the files are located under "win32"(for Win32 platform build) or "x64"(for x64 platform build) under "Debug24" folder will be created on the solution directory
+For "Release 2.4" build, the files are located under "win32"(for Win32 platform build) or "x64"(for x64 platform build) under "Release24" folder will be created on the solution directory
 
 ## *Using Visual Studio CLI*
 The top level workspace mod_aspdotnet.sln is invoked for a release build invoke with the syntax:
