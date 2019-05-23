@@ -2,8 +2,6 @@ What is md_aspdotnet?
 ================================
 **mod_aspdotnet** is an Apache module hosted which is now came to an end of support. It was first hosted by Apache HTTPD after they have retired **mod_aspdotnet** it has been migrated to http://sourceforge.net/projects/mod-aspdotnet, they have also suspended development of the project on that time the project was for Apache 2.2 (x86/32bts) only, but then the project again migrated to https://github.com/stjeong/mod_aspdotnet by [SeongTae Jeong](https://github.com/stjeong) and he had provided support for Apache 2.4 (x86/32bits). Now the project has been pulled from https://github.com/stjeong/mod_aspdotnet and upgraded for multiple architectures 32bits/64bits and re-opened by [Sagnik Ganguly](https://github.com/SagnikGanguly96) at https://github.com/SagnikGanguly96/mod_aspdotnet24. Now the next plan is to provide continuous support for the project in the coming future releases of Apache HTTPD.
 
-I'm not good at architecture on Apache and its module. My work is only to support for Apache 2.4 and .NET 4.0 or later.
-
 You have to install appropriate modules for your environment as follows.
 
 | Apache Version | mod_aspdotet                          |  Architecture  | .NET  |
