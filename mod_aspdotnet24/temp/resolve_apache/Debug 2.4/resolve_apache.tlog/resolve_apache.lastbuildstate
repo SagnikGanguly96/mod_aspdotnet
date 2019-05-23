@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug 2.4|Win32|D:\Projects\VisualStudio\ApacheModules\HTTPD2.4\mod_aspdotnet24\|
