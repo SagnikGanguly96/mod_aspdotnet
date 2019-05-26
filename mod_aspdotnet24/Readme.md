@@ -13,6 +13,20 @@ You have to install appropriate modules for your environment as follows.
 
 How to Build
 ================================
+### Dependencies
+1.) Visual Studo 2017 (or later)
+
+2.) Visual Studio Platform Tools v141 (or later)
+
+2.) C/C++ Desktop Development Full Workload for Visual Studio
+
+3.) Dot.NET Framework 4.6 Full (or later)
+
+4.) Windows 7 SDK
+
+5.) Windows 8 SDK (or later)
+
+
 ## *Using Visual Studio IDE*
 Run Visual Studio
 
@@ -63,6 +77,12 @@ for installations of Apache.exe (Release flavor) or httpd.exe (Release 2.2).
 
 How to Install
 ================================
+### Dependencies
+1.) Dot.NET Framework 4.6 Client (or later)
+
+2.) Global Assembly Cache Utility (GACUtil) (not required for Automatc Installation)
+
+
 ## *For IDE Builds*
 After building mod_aspdotnet successfully, you will have 3 files which are:
 	1.) Apache.Web.dll
@@ -235,7 +255,7 @@ For example, we have a x64 build and the files are located at "D:\Projects\mod_a
 
 ## *From Installer (MSI/EXE) Releases*
 Nothing to explain very much, just download appropriate version of the installer and run the installer and everything will be taken care of by the installer.
-**Just one thing to note is you have downloaded appropriate version of the installer and create an Envioronment Variable for `APACHE24_PATH` with the value as the location of the Apache 2.4 or select the location of Apache2.4 installation.**
+**Just one thing to note is that, you have downloaded appropriate version of the installer and created an Envioronment Variable for `APACHE24_PATH` with the value as the location of the Apache 2.4 or select the location of Apache2.4 installation manually in the installer.**
 > Apache.Web.dll and mod_asdpdotnet.so have dependencies on [Microsoft Visual C++ Redistributable for Visual Studio 2017](https://www.visualstudio.com/downloads/)
 
 ---
