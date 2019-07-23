@@ -4,7 +4,7 @@ What is mod_aspdotnet?
 
 You have to install appropriate modules for your environment as follows.
 
-| Apache Version | mod_aspdotet                          |  Architecture  | .NET  |
+| Apache HTTPD Version | mod_aspdotet                          |  Architecture  | .NET  |
 |----------------|---------------------------------------|----------------|-------|
 | 2.0            | [mod_aspdotnet-2.0.0.msi](https://archive.apache.org/dist/httpd/mod_aspdotnet/mod_aspdotnet-2.0.0.msi)       |    32bits (x86)        | CLR 2 |
 | 2.2            | [mod_aspdotnet-2.2.0.2006-setup-r2.msi](http://sourceforge.net/project/platformdownload.php?group_id=175077) |     32bits (x86)       | CLR 2 |
