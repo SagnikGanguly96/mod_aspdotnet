@@ -18,7 +18,7 @@ You have to install appropriate modules for your environment as follows.
 | 2.0            | [mod_aspdotnet-2.0.0.msi](https://archive.apache.org/dist/httpd/mod_aspdotnet/mod_aspdotnet-2.0.0.msi)       |    32bits (x86)        | CLR 2 |
 | 2.2            | [mod_aspdotnet-2.2.0.2006-setup-r2.msi](http://sourceforge.net/project/platformdownload.php?group_id=175077) |     32bits (x86)       | CLR 2 |
 | 2.4               | [mod_aspdotnet-2.2.0-2017](https://github.com/stjeong/mod_aspdotnet) |    32bits (x86)   | CLR 4 |
-| 2.4               | [mod_aspdotnet-2.4-2019](https://github.com/SagnikGanguly96/mod_aspdotnet24/releases) |    32/64 bits (x86/x64)   | CLR 4 |
+| 2.4               | [mod_aspdotnet-2.4-2019](https://github.com/SagnikGanguly96/mod_aspdotnet/releases) |    32/64 bits (x86/x64)   | CLR 4 |
 
 How to Build
 ================================
