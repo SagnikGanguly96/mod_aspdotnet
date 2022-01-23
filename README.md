@@ -245,7 +245,7 @@ For example, we have a x64 build and the files are located at "D:\Projects\mod_a
 ## *From Installer (MSI/EXE) Releases*
 Nothing to explain very much, just download appropriate version of the installer and run the installer and everything will be taken care of by the installer.
 **Just one thing to note is you have downloaded appropriate version of the installer and create an Envioronment Variable for `APACHE24_PATH` with the value as the location of the Apache 2.4 or select the location of Apache2.4 installation.**
-> Apache.Web.dll and mod_asdpdotnet.so have dependencies on [Microsoft Visual C++ Redistributable for Visual Studio 2017](https://www.visualstudio.com/downloads/)
+> Apache.Web.dll and mod_aspdotnet.so have dependencies on [Microsoft Visual C++ Redistributable for Visual Studio 2017](https://www.visualstudio.com/downloads/)
 
 ---
 
