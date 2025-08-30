@@ -1,0 +1,26 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+	 xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui"
+     xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+	
+	<Package Id="SGNetworks.Setup" Name="Apache ASP.NET Module" Manufacturer="SGNetworks" Version="1.0.0.0">
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+		<Launch Condition="MsiNTProductType = 1" Message="Wrong OS type!" />
+
+		<MediaTemplate EmbedCab="yes" />
+
+		<util:QueryNativeMachine />
+		
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)Resources\License.rtf" />
+		<WixVariable Id="WixUIInstallDirDlgDescription" Value="Please select the folder where Apache is installed." />
+		<WixVariable Id="WixUIInstallDirDlgTitle" Value="Apache Installation Location" />
+
+		<ui:WixUI Id="WixUI_InstallDir" InstallDirectory="INSTALLFOLDER" />
+
+		<Feature Id="Main" Title="Apache 2.4 ASP.NET Module" Level="1">
+			<Feature Id="CoreFeature" Title="Module" Level="1">
+				<ComponentGroupRef Id="AppComponents" />
+			</Feature>
+		</Feature>
+	</Package>
+</Wix>

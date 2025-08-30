@@ -1,0 +1,20 @@
+﻿<Project Sdk="WixToolset.Sdk/6.0.2">
+  <PropertyGroup>
+    <OutputType>Bundle</OutputType>
+    <OutputName>Apache ASP.NET Module Setup</OutputName>
+    <OutputPath>$(SolutionDir)build\output\$(Platform)\$(Configuration)\installer\bootstrapper\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\intermediate\$(Platform)\$(Configuration)\installer\bootstrapper\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.BootstrapperApplications.wixext" Version="6.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\resolve_apache\resolve_apache.vcxproj" />
+    <ProjectReference Include="..\Setup\Setup.wixproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VC_redist.arm64.exe" />
+    <None Include="Resources\VC_redist.x64.exe" />
+    <None Include="Resources\VC_redist.x86.exe" />
+  </ItemGroup>
+</Project>

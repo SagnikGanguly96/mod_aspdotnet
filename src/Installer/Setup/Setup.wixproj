@@ -1,0 +1,23 @@
+﻿<Project Sdk="WixToolset.Sdk/6.0.2">
+  <PropertyGroup>
+    <OutputPath>$(SolutionDir)build\output\$(Platform)\$(Configuration)\installer\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\intermediate\$(Platform)\$(Configuration)\installer\</IntermediateOutputPath>
+    <OutputName>$(MSBuildProjectName)</OutputName>
+    <SignOutput>true</SignOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="6.0.2" />
+    <PackageReference Include="WixToolset.Util.wixext" Version="6.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ApacheWeb\ApacheWeb.vcxproj" />
+    <ProjectReference Include="..\..\mod_aspdotnet\mod_aspdotnet.vcxproj" />
+    <ProjectReference Include="..\..\resolve_apache\resolve_apache.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\License.rtf" />
+  </ItemGroup>
+</Project>

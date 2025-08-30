@@ -1,0 +1,49 @@
+﻿<Wix
+	xmlns="http://wixtoolset.org/schemas/v4/wxs"
+	xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
+	<Bundle Id="SGNetworks.Bootstrapper" Name="Apache ASP.NET Module" Manufacturer="SGNetworks" Version="1.0.0.0">
+		<BootstrapperApplication>
+			<bal:WixStandardBootstrapperApplication LicenseUrl="https://www.example.com/license" Theme="hyperlinkLicense" />
+		</BootstrapperApplication>
+
+		<Variable Name="APACHE_ARCH" Type="string" Value="" />
+
+		<Chain>
+			<!-- Detect Apache architecture -->
+			<ExePackage Id="DetectArch"
+						SourceFile="resolve_apache.exe"
+						PerMachine="yes"
+						Vital="no"
+						InstallArguments="[APACHEDIR]"
+						InstallCondition="NOT APACHE_ARCH"
+						DetectCondition="APACHE_ARCH"
+						UninstallArguments="/uninstall"/>
+
+			<!-- Install x64 VCRedist if Apache is x64 -->
+			<ExePackage
+				Id="VCRedist_x64"
+				SourceFile="$(var.ProjectDir)Resources\VC_redist.x64.exe"
+				InstallArguments="/quiet /norestart"
+				Vital="yes"
+				PerMachine="yes"
+				InstallCondition="ApacheArch = 'x64'"
+				DetectCondition="APACHE_ARCH"
+				UninstallArguments="/uninstall /quiet /norestart" />
+
+			<!-- Install x86 VCRedist if Apache is x86 -->
+			<ExePackage
+				Id="VCRedist_x86"
+				SourceFile="$(var.ProjectDir)Resources\VC_redist.x86.exe"
+				InstallArguments="/quiet /norestart"
+				Vital="yes"
+				PerMachine="yes"
+				InstallCondition="ApacheArch = 'x86'"
+				DetectCondition="APACHE_ARCH"
+				UninstallArguments="/uninstall /quiet /norestart" />
+
+			<!-- Your MSI installer -->
+			<MsiPackage SourceFile="Setup.msi" />
+		</Chain>
+
+	</Bundle>
+</Wix>

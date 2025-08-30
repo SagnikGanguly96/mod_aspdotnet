@@ -1,0 +1,12 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="AppComponents" Directory="INSTALLFOLDER">
+			<Component>
+				<File Source="Apache.Web.dll" Assembly=".net" />
+			</Component>
+			<Component>
+				<File Source="mod_aspdotnet.so" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

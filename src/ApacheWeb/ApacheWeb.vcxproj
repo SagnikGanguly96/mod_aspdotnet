@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApacheWeb.h" />
+    <ClInclude Include="ApacheWebVersion.h" />
+    <ClInclude Include="Host.h" />
+    <ClInclude Include="HostFactory.h" />
+    <ClInclude Include="http_header_arrays.h" />
+    <ClInclude Include="WorkerRequest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="WorkerRequest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ApacheWeb.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <ProjectGuid>{11051f27-a85f-4d3e-990b-823f75f5f807}</ProjectGuid>
+    <RootNamespace>ApacheWeb</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>Apache.Web</TargetName>
+    <IncludePath>$(SolutionDir)src\dependencies\apache2_4_include\$(Platform);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)src\dependencies\apache2_4_lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>Apache.Web</TargetName>
+    <IncludePath>$(SolutionDir)src\dependencies\apache2_4_include\$(Platform);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)src\dependencies\apache2_4_lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>Apache.Web</TargetName>
+    <IncludePath>$(SolutionDir)src\dependencies\apache2_4_include\$(Platform);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)src\dependencies\apache2_4_lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>Apache.Web</TargetName>
+    <IncludePath>$(SolutionDir)src\dependencies\apache2_4_include\$(Platform);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)src\dependencies\apache2_4_lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;APACHEWEB_EXPORTS;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(APACHE22_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(OutDir);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;comsuppwd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libapr-1.dll;libaprutil-1.dll;libhttpd.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(APACHE22_PATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RegisterOutput>false</RegisterOutput>
+      <TypeLibraryFile>$(SolutionDir)build\output\$(Platform)\$(Configuration)\Apache.Web.tlb</TypeLibraryFile>
+      <MergedIDLBaseFileName>Apache.Web.idl</MergedIDLBaseFileName>
+    </Link>
+    <PostBuildEvent>
+      <Command>REM sn -Ra "$(TargetPath)" "$(ProjectDir)Apache.Web.snk"
+tlbexp /nologo /out:"$(IntDir)Apache.Web.tlb" "$(TargetPath)"
+xcopy /Y "$(IntDir)Apache.Web.tlb" "$(SolutionDir)build\intermediate\mod_aspdotnet\$(Platform)\$(Configuration)\"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Signing .dll, Exporting .tlb and Installing debug components to the GAC</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;APACHEWEB_EXPORTS;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(APACHE22_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(OutDir);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libapr-1.dll;libaprutil-1.dll;libhttpd.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(APACHE22_PATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RegisterOutput>false</RegisterOutput>
+      <TypeLibraryFile>$(SolutionDir)build\output\$(Platform)\$(Configuration)\Apache.Web.tlb</TypeLibraryFile>
+      <MergedIDLBaseFileName>Apache.Web.idl</MergedIDLBaseFileName>
+    </Link>
+    <PostBuildEvent>
+      <Command>REM sn -Ra "$(TargetPath)" "$(ProjectDir)Apache.Web.snk"
+tlbexp /nologo /out:"$(IntDir)Apache.Web.tlb" "$(TargetPath)"
+xcopy /Y "$(IntDir)Apache.Web.tlb" "$(SolutionDir)build\intermediate\mod_aspdotnet\$(Platform)\$(Configuration)\"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Signing .dll, Exporting .tlb and Installing debug components to the GAC</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;APACHEWEB_EXPORTS;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(APACHE22_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(OutDir);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;comsuppwd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libapr-1.dll;libaprutil-1.dll;libhttpd.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(APACHE22_PATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RegisterOutput>false</RegisterOutput>
+      <TypeLibraryFile>$(SolutionDir)build\output\$(Platform)\$(Configuration)\Apache.Web.tlb</TypeLibraryFile>
+      <MergedIDLBaseFileName>Apache.Web.idl</MergedIDLBaseFileName>
+    </Link>
+    <PostBuildEvent>
+      <Command>REM sn -Ra "$(TargetPath)" "$(ProjectDir)Apache.Web.snk"
+tlbexp /nologo /out:"$(IntDir)Apache.Web.tlb" "$(TargetPath)"
+xcopy /Y "$(IntDir)Apache.Web.tlb" "$(SolutionDir)build\intermediate\mod_aspdotnet\$(Platform)\$(Configuration)\"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Signing .dll, Exporting .tlb and Installing debug components to the GAC</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;APACHEWEB_EXPORTS;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(APACHE22_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(OutDir);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;libhttpd.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libapr-1.dll;libaprutil-1.dll;libhttpd.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(APACHE22_PATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RegisterOutput>false</RegisterOutput>
+      <TypeLibraryFile>$(SolutionDir)build\output\$(Platform)\$(Configuration)\Apache.Web.tlb</TypeLibraryFile>
+      <MergedIDLBaseFileName>Apache.Web.idl</MergedIDLBaseFileName>
+    </Link>
+    <PostBuildEvent>
+      <Command>REM sn -Ra "$(TargetPath)" "$(ProjectDir)Apache.Web.snk"
+tlbexp /nologo /out:"$(IntDir)Apache.Web.tlb" "$(TargetPath)"
+xcopy /Y "$(IntDir)Apache.Web.tlb" "$(SolutionDir)build\intermediate\mod_aspdotnet\$(Platform)\$(Configuration)\"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Signing .dll, Exporting .tlb and Installing debug components to the GAC</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
